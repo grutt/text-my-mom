@@ -5,12 +5,15 @@ description = "sometimes i forget to text my mom, so i created an llm flow to do
 authors = ["gabriel ruttner <gabriel.ruttner@gmail.com>"]
 readme = "README.md"
 package-mode = false
+packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 hatchet-sdk = "^0.30.0"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "src.worker:main"

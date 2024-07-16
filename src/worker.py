@@ -57,7 +57,7 @@ class TextMom:
             "step4": "step4",
         }
 
-
-worker = hatchet.worker("text-mom-worker")
-worker.register_workflow(TextMom())
-worker.start()
+def main():
+    worker = hatchet.worker("text-mom-worker")
+    worker.register_workflow(TextMom())
+    worker.start()
